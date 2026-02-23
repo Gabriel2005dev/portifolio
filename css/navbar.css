@@ -1,0 +1,171 @@
+
+
+/* ============================= */
+/* NAVBAR PREMIUM */
+/* ============================= */
+
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  padding: 1.4rem 0;
+  transition: all 0.4s ease;
+}
+
+.header.scrolled {
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* BRAND */
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  cursor: pointer;
+}
+
+.brand-mark {
+  font-weight: 700;
+  padding: 6px 10px;
+  border: 1px solid var(--color-accent);
+  color: var(--color-accent);
+  font-size: 0.9rem;
+}
+
+.brand-name {
+  font-weight: 600;
+}
+
+/* NAV */
+
+.nav {
+  position: relative;
+}
+
+.nav-list {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  color: var(--color-text-muted);
+  font-weight: 500;
+  font-size: 0.95em;
+  transition: transform 0.25s cubic-bezier(.4,0,.2,1);
+}
+
+
+
+/* Hover sobe levemente */
+.nav-link:hover {
+  transform: translateY(-4px);
+
+}
+
+/* Apenas o ícone fica vermelho */
+/* Ícone padrão */
+.nav-link svg {
+  width: 25px;
+  height: 25px;
+  stroke: var(--color-white);
+  transition: stroke 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover sobe */
+.nav-link:hover {
+  transform: translateY(-4px);
+}
+
+/* Apenas o ícone fica vermelho */
+.nav-link:hover svg {
+  stroke: var(--color-accent);
+}
+
+/* Texto fica branco elegante */
+.nav-link:hover span {
+  color: var(--color-text);
+}
+
+/* Texto fica branco elegante */
+.nav-link:hover span {
+  color: var(--color-text);
+}
+
+
+/* MENU MOBILE */
+
+.menu-toggle {
+  display: none;
+  width: 30px;
+  height: 25px;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  height: 5px;
+  background: var(--color-white);
+  transition: 0.3s ease;
+}
+
+.nav-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.3);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease;
+  z-index: 900;
+}
+
+.nav-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 992px) {
+
+  .nav {
+    position: fixed;
+    right: -100%;
+    top: 0;
+    height: 100vh;
+    width: 60%;
+    background: var(--color-base);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.4s ease;
+    z-index: 1001;
+  }
+
+  .nav.active {
+    right: 0;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+}

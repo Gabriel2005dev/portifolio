@@ -1,0 +1,90 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Indie+Flower&family=Playwrite+AT:ital,wght@0,100..400;1,100..400&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Indie+Flower&family=Playwrite+AT:ital,wght@0,100..400;1,100..400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-base: #11141f;
+  --color-soft: #ffffff;
+  --color-accent: #ff0037; /*  --color-accent: #ff0055;
+*/
+  --color-deep: #ff0055;
+  --color-white: #ffffff;
+}
+
+body {
+  font-family: "Figtree", sans-serif;
+  background: var(--color-base);
+  color: var(--color-white);
+  letter-spacing: 2px;
+
+}
+
+.container {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+section {
+    height: 100vh;
+    
+}
+
+button{
+  font-family: "Figtree", sans-serif;
+  display: flex;
+  border: none;
+  padding: 15px 25px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6em;
+   font-weight: 700;
+  font-size: 0.95em;
+  transition: transform 0.25s cubic-bezier(.4,0,.2,1);
+  letter-spacing: 2px;
+  border-radius: 10px;
+
+  
+
+}
+
+/* Organização interna */
+.btn-content {
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+  transition: transform 0.3s ease;
+
+}
+
+.btn-content svg {
+  transition: transform 0.3s ease;
+  
+}
+
+/* Hover sobe tudo */
+.btn-hero button:hover .btn-content svg {
+  transform: translateY(-4px);
+  
+}
+
+@keyframes pulseIcon {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

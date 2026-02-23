@@ -1,0 +1,163 @@
+/* ========================= */
+/* MANIFESTO SECTION */
+/* ========================= */
+
+.manifesto-section {
+  padding: 8rem 5%;
+}
+
+.manifesto-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  width: 100%;
+}
+
+/* IMPORTANTE → evita quebra de layout */
+.text-side,
+.code-side {
+  min-width: 0;
+}
+
+/* ========================= */
+/* TEXTO */
+/* ========================= */
+
+.text-side {
+  display: flex;
+  align-items: center;
+}
+
+.manifesto-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Label */
+
+.section-label {
+  display: inline-block;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 2rem;
+}
+
+/* Title */
+
+.title {
+  font-size: clamp(2.4rem, 4vw, 3.2rem);
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+}
+
+/* Lead */
+
+.lead {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #ffc7c7;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+/* Info */
+
+.info-block p {
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: #a0a3b1;
+  margin-bottom: 1.4rem;
+}
+
+/* Closing */
+
+.closing {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.divider {
+  width: 40px;
+  height: 1px;
+  background: rgba(255,255,255,0.2);
+}
+
+.strong {
+  font-weight: 600;
+}
+
+/* ========================= */
+/* CODE BLOCK */
+/* ========================= */
+
+.code-window {
+  width: 100%;
+  background: #151823;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.6);
+  overflow: hidden;
+}
+
+.code-header {
+  display: flex;
+  gap: 8px;
+  padding: 14px;
+  background: #1b1f2b;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.red { background: #ff5f56; }
+.yellow { background: #ffbd2e; }
+.green { background: #27c93f; }
+
+pre {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.8rem;
+  line-height: 1.8;
+  color: #cdd6f4;
+  padding: 1rem 2rem;
+
+  /* CORREÇÃO DEFINITIVA */
+  overflow-x: auto;
+  max-width: 100%;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* ========================= */
+/* RESPONSIVO */
+/* ========================= */
+
+@media (max-width: 1024px) {
+
+  .manifesto-container {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  .manifesto-content {
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .closing {
+    justify-content: center;
+  }
+
+}

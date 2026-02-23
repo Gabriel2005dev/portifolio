@@ -1,0 +1,380 @@
+.hero-cinematic {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-color: var(--color-base);
+
+}
+
+.hero-inner {
+  display: flex;
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  align-items: center;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  max-width: 60%;
+  height: 50%;
+  justify-content: space-between;
+  align-items: start;
+}
+
+/* Headline forte */
+/* Headline forte */
+
+.hero-title h1 {
+  font-size: 3em;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 1s ease forwards;
+
+
+}
+
+
+.highlight {
+  color: var(--color-accent);
+    font-family: "Indie Flower", cursive;
+
+}
+
+/* Subheadline estratégica */
+.hero-title p {
+  margin-top: 5%;
+  font-size: 1.5em;
+  color: #b5b5b5;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 1s ease forwards 0.3s;
+  line-height: 1.5;
+
+
+}
+
+/* CTA microinteração */
+
+.btn-hero{
+  margin-top: 5%;
+  display: flex;
+  gap: 2rem;
+
+}
+
+.hero-cta{
+  background-color: var(--color-accent);
+  color: var(--color-text-muted);
+}
+.hero-curriculum{
+  border: 2px solid var(--color-white);
+  background-color: var(--color-base);
+  color: var(--color-white);
+}
+
+
+
+
+
+/* Animations */
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scrollMove {
+  0% { top: -20px; }
+  100% { top: 100%; }
+}
+
+/* ====== SKILLS MARQUEE ====== */
+
+.skills-marquee {
+  display: flex;
+  position: relative;
+  width: 60%;
+  overflow: hidden;
+  padding: 25px 0;
+  margin-top: 10%;
+
+}
+
+/* Fade lateral cinematográfico */
+.skills-marquee::before,
+.skills-marquee::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 200px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+  
+}
+
+.skills-marquee::before {
+  left: 0;
+  background: linear-gradient(to right, #11141f 0%, transparent 100%);
+}
+
+.skills-marquee::after {
+  right: 0;
+  background: linear-gradient(to left, #11141f 0%, transparent 100%);
+}
+
+.skills-track {
+  display: flex;
+  width: fit-content;
+  animation: marquee 10s linear infinite;
+  will-change: transform;
+}
+
+.skills-group {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.skills-group i {
+  font-size: 3em;
+  opacity: 0.7;
+  transition: all 0.4s ease;
+  filter: grayscale(30%);
+}
+
+
+/* Animação infinita */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* ========================= */
+/* SCROLL INDICATOR PREMIUM  */
+/* ========================= */
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: float 3s ease-in-out infinite;
+  z-index: 10;
+}
+
+.scroll-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Texto */
+.scroll-text {
+  font-size: 0.7rem;
+  letter-spacing: 4px;
+  font-weight: 500;
+  color: var(--color-white);
+}
+
+/* Mouse */
+.scroll-mouse {
+  width: 26px;
+  height: 44px;
+  border: 2px solid var(--color-white);
+  border-radius: 20px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding-top: 6px;
+  overflow: hidden;
+}
+
+/* Bolinha animada */
+.scroll-dot {
+  width: 4px;
+  height: 8px;
+  background: var(--color-accent);
+  border-radius: 10px;
+  animation: scrollMove 2s infinite;
+}
+
+/* Movimento da bolinha */
+@keyframes scrollMove {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(16px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+}
+
+/* Flutuação geral */
+@keyframes float {
+  0%, 100% {
+    transform: translate(-50%, 0px);
+  }
+  50% {
+    transform: translate(-50%, -6px);
+  }
+}
+
+/* ============================= */
+/* RESPONSIVIDADE REFINADA */
+/* ============================= */
+
+@media (max-width: 1024px) {
+
+  .hero-cinematic {
+    height: auto;
+    min-height: 100vh;
+    padding: 120px 40px 80px;
+  }
+
+  .hero-inner {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+  }
+
+  .hero-content {
+    max-width: 800px;
+    height: auto;
+    align-items: center;
+    text-align: center;
+    gap: 32px;
+  }
+
+  .hero-title h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.15;
+  }
+
+  .hero-title p {
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
+    margin-top: 0;
+    max-width: 650px;
+  }
+
+  .btn-hero {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  .skills-marquee {
+    width: 100%;
+    margin-top: 40px;
+  }
+
+  .skills-group i {
+    font-size: 2.5rem;
+  }
+
+   .scroll-indicator {
+    bottom: clamp(20px, 4vh, 40px);
+    transform: translateX(-50%) scale(0.9);
+  }
+
+  .scroll-text {
+    font-size: 0.65rem;
+    letter-spacing: 3px;
+  }
+
+  .scroll-mouse {
+    width: 22px;
+    height: 38px;
+  }
+
+  .scroll-dot {
+    width: 3px;
+    height: 7px;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .hero-cinematic {
+    height: auto;
+    min-height: 100vh;
+    padding: 100px 24px 60px;
+  }
+
+  .hero-inner {
+    gap: 50px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    gap: 28px;
+  }
+
+  .hero-title h1 {
+    font-size: clamp(2.5rem, 7vw, 3rem);
+    line-height: 1.2;
+  }
+
+  .hero-title p {
+    font-size: clamp(0.8rem, 4vw, 0.8rem);
+    line-height: 1.6;
+    max-width: 100%;
+  }
+
+  .btn-hero {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .btn-hero a,
+  .btn-hero button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .skills-marquee {
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .skills-group {
+    gap: 2rem;
+  }
+
+  .skills-group i {
+    font-size: 2rem;
+  }
+
+  .skills-marquee::before,
+  .skills-marquee::after {
+    width: 40px;
+  }
+
+  .scroll-indicator {
+    display: none;
+  }
+}

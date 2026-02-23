@@ -48,7 +48,7 @@ button{
   font-family: "Figtree", sans-serif;
   display: flex;
   border: none;
-  padding: 15px 25px;
+  padding: 0.8rem 1.2rem;
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -57,7 +57,7 @@ button{
   font-size: 0.95em;
   transition: transform 0.25s cubic-bezier(.4,0,.2,1);
   letter-spacing: 2px;
-  border-radius: 10px;
+  border-radius: 5px;
 
   
 

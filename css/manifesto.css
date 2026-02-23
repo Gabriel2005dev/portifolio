@@ -15,11 +15,6 @@
   grid-template-columns: 1fr 1fr;
 }
 
-/* IMPORTANTE → evita quebra de layout */
-.text-side,
-.code-side {
-
-}
 
 /* ========================= */
 /* TEXTO */
@@ -27,6 +22,7 @@
 
 .text-side {
   display: flex;
+  padding: 4rem 0;
 }
 
 .manifesto-content {
@@ -39,7 +35,7 @@
 
 .section-label {
   display: inline-block;
-    font-size: clamp(0.75rem, 0.8vw, 0.9rem);
+  font-size: clamp(0.75rem, 0.8vw, 1rem);
   letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--color-accent);
@@ -48,7 +44,7 @@
 /* Title */
 
 .title {
-  font-size: clamp(1.75rem, 3vw, 5rem);
+  font-size: clamp(3rem, 3vw, 5rem);
   font-weight: 600;
   line-height: 1.2;
   color: #ffffff;
@@ -108,8 +104,8 @@
 .code-header {
   display: flex;
   gap: 8px;
-  padding: 14px;
   background: #1b1f2b;
+  padding: 1rem;
 }
 
 .dot {

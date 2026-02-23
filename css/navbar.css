@@ -9,7 +9,7 @@
   width: 100%;
   top: 0;
   z-index: 1000;
-  padding: 1.5rem;
+  padding: 1.5rem 5%;
   transition: all 0.4s ease;
 }
 

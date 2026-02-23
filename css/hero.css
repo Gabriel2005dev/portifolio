@@ -1,6 +1,7 @@
 .hero-cinematic {
   position: relative;
-  height: 100vh;
+  padding: var(--section-padding-block) 5%;
+  height: auto;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -239,6 +240,21 @@
   }
   50% {
     transform: translate(-50%, -6px);
+  }
+}
+
+@media (max-width: 1300px) {
+
+  .career-section {
+  
+  }
+
+  .career-grid {
+    gap: 3rem;
+  }
+
+  .career-card {
+    padding: 2.2rem;
   }
 }
 

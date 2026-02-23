@@ -16,6 +16,10 @@
 */
   --color-deep: #ff0055;
   --color-white: #ffffff;
+
+  --section-min-height: 100svh;
+  --section-padding-block: clamp(4rem, 8vh, 8rem);
+  
 }
 
 body {
@@ -26,17 +30,19 @@ body {
 
 }
 
-.container {
-  width: 100%;
-  max-width: 1600px;
-  margin: 0 auto;
-  padding: 0 5%;
+section {
+  min-height: var(--section-min-height);
+  height: auto;
 }
 
-section {
-    height: 100vh;
-    
+
+
+.container {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
 }
+
 
 button{
   font-family: "Figtree", sans-serif;

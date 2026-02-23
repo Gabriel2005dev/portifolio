@@ -3,20 +3,22 @@
 /* ========================= */
 
 .manifesto-section {
-  padding: 8rem 5%;
+  align-items: center;
+  display: flex;
+  padding: var(--section-padding-block) 5%;
+
 }
 
 .manifesto-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
   gap: 5rem;
-  width: 100%;
+  grid-template-columns: 1fr 1fr;
 }
 
 /* IMPORTANTE → evita quebra de layout */
 .text-side,
 .code-side {
-  min-width: 0;
+
 }
 
 /* ========================= */
@@ -25,7 +27,6 @@
 
 .text-side {
   display: flex;
-  align-items: center;
 }
 
 .manifesto-content {
@@ -38,31 +39,28 @@
 
 .section-label {
   display: inline-block;
-  font-size: 0.9rem;
+    font-size: clamp(0.75rem, 0.8vw, 0.9rem);
   letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--color-accent);
-  margin-bottom: 2rem;
 }
 
 /* Title */
 
 .title {
-  font-size: clamp(2.4rem, 4vw, 3.2rem);
+  font-size: clamp(1.75rem, 3vw, 5rem);
   font-weight: 600;
   line-height: 1.2;
-  margin-bottom: 1.5rem;
   color: #ffffff;
 }
 
 /* Lead */
 
 .lead {
-  font-size: 1.2rem;
+    font-size: clamp(0.75rem, 3vw, 1.2rem);
   font-weight: 500;
   color: #ffc7c7;
   line-height: 1.7;
-  margin-bottom: 2rem;
 }
 
 /* Info */
@@ -71,7 +69,6 @@
   font-size: 1.05rem;
   line-height: 1.9;
   color: #a0a3b1;
-  margin-bottom: 1.4rem;
 }
 
 /* Closing */
@@ -80,8 +77,7 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin-top: 2.5rem;
-  font-size: 1.1rem;
+    font-size: clamp(0.75rem, 0.8vw, 1.1rem);
   font-weight: 500;
   color: #ffffff;
 }
@@ -128,7 +124,7 @@
 
 pre {
   font-family: 'Fira Code', monospace;
-  font-size: 0.8rem;
+  font-size: clamp( 0.6rem, 0.8vw, 0.8rem);
   line-height: 1.8;
   color: #cdd6f4;
   padding: 1rem 2rem;

@@ -3,7 +3,12 @@
 /* ========================= */
 
 .career-section {
-  padding: 8rem 5%;
+  align-items: center;
+  display: flex;
+  padding: var(--section-padding-block) 5%;
+
+  
+ 
 }
 
 .career-grid {

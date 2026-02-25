@@ -35,8 +35,6 @@
 
 .section-label {
   display: inline-block;
-  font-size: clamp(0.75rem, 0.8vw, 1rem);
-  letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--color-accent);
 }
@@ -44,26 +42,18 @@
 /* Title */
 
 .title {
-  font-size: clamp(3rem, 3vw, 5rem);
-  font-weight: 600;
-  line-height: 1.2;
   color: #ffffff;
 }
 
 /* Lead */
 
 .lead {
-    font-size: clamp(0.75rem, 3vw, 1.2rem);
-  font-weight: 500;
   color: #ffc7c7;
-  line-height: 1.7;
 }
 
 /* Info */
 
 .info-block p {
-  font-size: 1.05rem;
-  line-height: 1.9;
   color: #a0a3b1;
 }
 
@@ -73,8 +63,6 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-    font-size: clamp(0.75rem, 0.8vw, 1.1rem);
-  font-weight: 500;
   color: #ffffff;
 }
 
@@ -85,7 +73,6 @@
 }
 
 .strong {
-  font-weight: 600;
 }
 
 /* ========================= */

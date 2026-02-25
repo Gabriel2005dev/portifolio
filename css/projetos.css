@@ -1,0 +1,109 @@
+/* =============================
+   PROJETOS
+============================= */
+
+.section-projetos {
+  padding: var(--section-padding-block) 5%;
+
+}
+
+.section-projetos .section-title {
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  letter-spacing: 0.14em;
+  font-size: clamp(0.8rem, 1vw, 1rem);
+  font-weight: 700;
+}
+
+.grid-6x2 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.card-projeto {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 390px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+  background: linear-gradient(145deg, rgba(20, 20, 35, 0.92), rgba(11, 11, 20, 0.95));
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.35);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.card-projeto:hover {
+  transform: translateY(-6px);
+  border-color: color-mix(in srgb, var(--color-accent) 45%, rgba(255, 255, 255, 0.08));
+}
+
+.card-projeto img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  display: block;
+}
+
+.info-card-projetos {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: start;
+  gap: 0.75rem;
+  padding: 1rem;
+}
+
+.card-projeto-title,
+.info-card-projetos p {
+  grid-column: 1 / -1;
+  margin: 0;
+}
+
+.card-projeto-title {
+  color: var(--color-white);
+  font-size: clamp(1rem, 1.2vw, 1.12rem);
+}
+
+.info-card-projetos p {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: clamp(0.75rem, 0.95vw, 0.92rem);
+  line-height: 1.5;
+}
+
+.btn-card-projeto {
+  width: 100%;
+  min-height: 2.4rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--color-white);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.btn-card-projeto:hover {
+  border-color: var(--color-accent);
+  background: color-mix(in srgb, var(--color-accent) 16%, transparent);
+}
+
+@media (max-width: 980px) {
+  .grid-6x2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: auto;
+  }
+}
+
+@media (max-width: 680px) {
+  .grid-6x2 {
+    grid-template-columns: 1fr;
+  }
+
+  .card-projeto {
+    min-height: 360px;
+  }
+}

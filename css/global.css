@@ -19,6 +19,7 @@
 
   --section-min-height: 100svh;
   --section-padding-block: clamp(4rem, 8vh, 8rem);
+  --border-radius: 1rem;
   
 }
 
@@ -50,6 +51,9 @@ h1{
 }
 h2{
   font-size: clamp( 0.8rem, 1vw, 1rem);
+}
+h4{
+  font-size: clamp(0.7rem, 1vw, 1rem);
 }
 
 p {

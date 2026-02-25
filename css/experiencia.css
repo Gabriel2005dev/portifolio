@@ -34,7 +34,8 @@
   position: relative;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 18px;
+  border-radius: var(--border-radius);
+
   background: linear-gradient(145deg, rgba(20, 20, 35, 0.92), rgba(11, 11, 20, 0.95));
   transition: transform 0.3s ease, border-color 0.3s ease;
 }
@@ -100,9 +101,8 @@
 .exp-period {
   display: block;
   color: #8a95ad;
-}
+  font-size: clamp(0.7rem, 1vw, 1rem);
 
-.exp-role {
 }
 
 .exp-place {
@@ -121,45 +121,22 @@
   list-style: none;
   display: grid;
   gap: 1rem;
-  font-size: clamp( 0.7rem, 1vw, 0.9rem);
 
 }
 
+
 .exp-topic-item {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  align-items: flex-start;
-  font-size: clamp( 0.7rem, 1vw, 0.9rem);
+  display: flex;
+  align-items: center;
+  font-size: clamp( 0.6rem, 1vw, 0.8rem);
   gap: 0.5rem;
 
 }
-
 .exp-topic-item svg {
-  font-size: 5rem;
-
+  display: flex;
+  width: 0.9rem;
+  height: 0.9rem;
 }
-
-
-
-
-
-
-.dot-full {
-  background: var(--color-accent);
-  border-color: var(--color-accent);
-}
-
-.dot-half {
-  background: linear-gradient(to right, var(--color-accent) 50%, transparent 50%);
-  border-color: var(--color-accent);
-}
-
-.dot-empty {
-  background: transparent;
-}
-
-
-
 
 /* =============================
    Grid de skills
